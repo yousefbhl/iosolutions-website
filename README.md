@@ -88,6 +88,7 @@ The live site wasn't reachable from the build environment, so the copy is based 
 - [ ] Careers perks
 - [ ] Logo: the header uses a placeholder "I + O" mark, so replace it with the official logo
 - [ ] Legal pages (Privacy, Accessibility links are placeholders)
+- [ ] Remove the `noindex` robots meta tag in `index.html` and `public/robots.txt` (they keep this concept preview out of search engines)
 
 ## Suggested next steps
 
