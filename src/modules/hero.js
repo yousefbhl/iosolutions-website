@@ -30,11 +30,11 @@ function createWave(canvas) {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
     lines.forEach((l) => {
       const g = ctx.createLinearGradient(0, 0, w, 0)
-      g.addColorStop(0, 'rgba(255,90,31,0)')
-      g.addColorStop(0.25, `rgba(255,90,31,${l.alpha * 0.8})`)
-      g.addColorStop(0.55, `rgba(255,154,90,${l.alpha})`)
-      g.addColorStop(0.8, `rgba(255,90,31,${l.alpha * 0.7})`)
-      g.addColorStop(1, 'rgba(255,90,31,0)')
+      g.addColorStop(0, 'rgba(0,245,212,0)')
+      g.addColorStop(0.22, `rgba(0,245,212,${l.alpha * 0.85})`)
+      g.addColorStop(0.5, `rgba(56,189,248,${l.alpha})`)
+      g.addColorStop(0.8, `rgba(13,146,244,${l.alpha * 0.85})`)
+      g.addColorStop(1, 'rgba(13,146,244,0)')
       l.grad = g
     })
     // Resizing clears the canvas; the animated loop repaints on its own.

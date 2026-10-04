@@ -2,6 +2,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
 import { getLang } from './i18n.js'
+import { registerSplit } from './reveal.js'
 import { reducedMotion, finePointer, whenVisible } from './env.js'
 
 /* ----------------------------------------------------------------------------
@@ -289,19 +290,20 @@ export function initClocks() {
 }
 
 /* ----------------------------------------------------------------------------
-   Footer — oversized wordmark rises letter by letter.
+   Footer — oversized closing line rises in as the footer scrolls up.
 ---------------------------------------------------------------------------- */
 export function initFooter() {
   const year = document.querySelector('[data-year]')
   if (year) year.textContent = new Date().getFullYear()
-  if (reducedMotion) return
-  const word = document.querySelector('.footer__word')
-  const split = SplitText.create(word, { type: 'chars', charsClass: 'char' })
-  gsap.set(word, { overflow: 'hidden' })
-  gsap.from(split.chars, {
-    yPercent: 100,
-    ease: 'none',
-    stagger: 0.04,
-    scrollTrigger: { trigger: '.footer', start: 'top 85%', end: 'bottom bottom', scrub: 0.8 },
+  const big = document.querySelector('[data-footer-big]')
+  if (!big || reducedMotion) return
+  registerSplit(big, (entry) => {
+    entry.split = SplitText.create(entry.el, { type: 'lines', mask: 'lines', linesClass: 'split-line' })
+    gsap.from(entry.split.lines, {
+      yPercent: 105,
+      ease: 'none',
+      stagger: 0.15,
+      scrollTrigger: { trigger: entry.el, start: 'top 98%', end: 'max', scrub: 0.8 },
+    })
   })
 }
