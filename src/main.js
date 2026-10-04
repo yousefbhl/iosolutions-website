@@ -1,6 +1,4 @@
-import '@fontsource-variable/inter-tight'
-import '@fontsource/instrument-serif/400.css'
-import '@fontsource/instrument-serif/400-italic.css'
+import '@fontsource-variable/plus-jakarta-sans'
 import 'lenis/dist/lenis.css'
 import './styles/base.css'
 import './styles/layout.css'
@@ -30,6 +28,7 @@ import {
   initFooter,
 } from './modules/sections.js'
 import { initFootprint } from './modules/footprint.js'
+import { initTeams } from './modules/teams.js'
 import { initForm } from './modules/form.js'
 
 gsap.registerPlugin(ScrollTrigger, SplitText, ScrambleTextPlugin)
@@ -51,6 +50,7 @@ initHero()
 initMarquee()
 initReveals()
 initServices()
+initTeams()
 initWhy()
 initProcess()
 initFootprint()

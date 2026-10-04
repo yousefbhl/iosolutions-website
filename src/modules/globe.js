@@ -10,8 +10,10 @@ import { reducedMotion, whenVisible } from './env.js'
  */
 
 const DEG = Math.PI / 180
-const PAPER = '243,241,236'
-const ACCENT = '255,90,31'
+const PAPER = '248,250,252' // surface-ice
+const BLUE = '13,146,244' // primary — atmosphere & rim
+const CYAN = '56,189,248' // cyan glow — arcs
+const TEAL = '0,245,212' // secondary — live pins & packets
 
 function toVec(lat, lng) {
   const la = lat * DEG
@@ -114,17 +116,17 @@ export function createGlobe(canvas, { sites, arcs, labels, views, getLabel }) {
 
     // Atmosphere halo, then an opaque sphere body on top of it
     const atmo = ctx.createRadialGradient(cx, cy, R * 0.96, cx, cy, R * 1.2)
-    atmo.addColorStop(0, `rgba(${ACCENT},0.2)`)
-    atmo.addColorStop(0.35, `rgba(${ACCENT},0.07)`)
-    atmo.addColorStop(1, `rgba(${ACCENT},0)`)
+    atmo.addColorStop(0, `rgba(${BLUE},0.24)`)
+    atmo.addColorStop(0.35, `rgba(${BLUE},0.08)`)
+    atmo.addColorStop(1, `rgba(${BLUE},0)`)
     ctx.fillStyle = atmo
     ctx.beginPath()
     ctx.arc(cx, cy, R * 1.2, 0, Math.PI * 2)
     ctx.fill()
     const body = ctx.createRadialGradient(cx - R * 0.4, cy - R * 0.45, R * 0.05, cx, cy, R)
-    body.addColorStop(0, '#1b1e2b')
-    body.addColorStop(0.6, '#0e1017')
-    body.addColorStop(1, '#0a0b10')
+    body.addColorStop(0, '#18243b')
+    body.addColorStop(0.6, '#0e1628')
+    body.addColorStop(1, '#0a101d')
     ctx.fillStyle = body
     ctx.beginPath()
     ctx.arc(cx, cy, R, 0, Math.PI * 2)
@@ -152,7 +154,7 @@ export function createGlobe(canvas, { sites, arcs, labels, views, getLabel }) {
     })
 
     // Rim light
-    ctx.strokeStyle = `rgba(${ACCENT},0.35)`
+    ctx.strokeStyle = `rgba(${BLUE},0.45)`
     ctx.lineWidth = 1
     ctx.beginPath()
     ctx.arc(cx, cy, R, 0, Math.PI * 2)
@@ -178,7 +180,7 @@ export function createGlobe(canvas, { sites, arcs, labels, views, getLabel }) {
         pen ? ctx.lineTo(sx, sy) : ctx.moveTo(sx, sy)
         pen = true
       }
-      ctx.strokeStyle = `rgba(${ACCENT},${arc.region === region ? 0.95 : 0.4})`
+      ctx.strokeStyle = arc.region === region ? `rgba(${CYAN},0.95)` : `rgba(${CYAN},0.35)`
       ctx.lineWidth = arc.region === region ? 1.6 : 1
       ctx.stroke()
 
@@ -192,8 +194,8 @@ export function createGlobe(canvas, { sites, arcs, labels, views, getLabel }) {
           const sy = cy - p.y * R
           const g = ctx.createRadialGradient(sx, sy, 0, sx, sy, 7)
           g.addColorStop(0, `rgba(${PAPER},0.95)`)
-          g.addColorStop(0.35, `rgba(${ACCENT},0.8)`)
-          g.addColorStop(1, `rgba(${ACCENT},0)`)
+          g.addColorStop(0.35, `rgba(${TEAL},0.8)`)
+          g.addColorStop(1, `rgba(${TEAL},0)`)
           ctx.fillStyle = g
           ctx.beginPath()
           ctx.arc(sx, sy, 7, 0, Math.PI * 2)
@@ -211,13 +213,13 @@ export function createGlobe(canvas, { sites, arcs, labels, views, getLabel }) {
       const active = s.region === region
       const pulse = (time * 0.6 + s.lat * 0.01) % 1
       if (active && !reducedMotion) {
-        ctx.strokeStyle = `rgba(${ACCENT},${(1 - pulse) * 0.8})`
+        ctx.strokeStyle = `rgba(${TEAL},${(1 - pulse) * 0.8})`
         ctx.lineWidth = 1.2
         ctx.beginPath()
         ctx.arc(sx, sy, 3 + pulse * 16, 0, Math.PI * 2)
         ctx.stroke()
       }
-      ctx.fillStyle = active ? `rgb(${ACCENT})` : `rgba(${PAPER},0.85)`
+      ctx.fillStyle = active ? `rgb(${TEAL})` : `rgba(${PAPER},0.85)`
       ctx.beginPath()
       ctx.arc(sx, sy, s.hq ? 4.2 : 2.8, 0, Math.PI * 2)
       ctx.fill()
@@ -231,7 +233,7 @@ export function createGlobe(canvas, { sites, arcs, labels, views, getLabel }) {
     }
 
     // Labels
-    ctx.font = `500 ${Math.max(11, Math.round(R / 26))}px "Inter Tight Variable", "Inter Tight", system-ui, sans-serif`
+    ctx.font = `600 ${Math.max(11, Math.round(R / 26))}px "Plus Jakarta Sans Variable", "Plus Jakarta Sans", system-ui, sans-serif`
     ctx.textBaseline = 'middle'
     for (const l of labelList) {
       const p = project(l.v[0], l.v[1], l.v[2])
@@ -244,7 +246,7 @@ export function createGlobe(canvas, { sites, arcs, labels, views, getLabel }) {
       const tw = ctx.measureText(text).width
       const bx = sx + (l.dx || 14)
       const by = sy + (l.dy || 0)
-      ctx.fillStyle = active ? `rgba(${ACCENT},${alpha * 0.18})` : `rgba(${PAPER},${alpha * 0.08})`
+      ctx.fillStyle = active ? `rgba(${TEAL},${alpha * 0.16})` : `rgba(${PAPER},${alpha * 0.08})`
       ctx.beginPath()
       ctx.roundRect(bx - 8, by - 12, tw + 16, 24, 12)
       ctx.fill()

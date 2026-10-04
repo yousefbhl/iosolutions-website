@@ -7,25 +7,41 @@
     <meta name="description" content="IO Solutions is a Canadian customer experience partner delivering bilingual customer care, sales, technical support and back-office services from Canada, Morocco and the Philippines since 2007." />
     <!-- Concept preview: keep out of search engines until launch (remove with public/robots.txt). -->
     <meta name="robots" content="noindex, nofollow" />
-    <meta name="theme-color" content="#08090E" />
+    <meta name="theme-color" content="#0B111E" />
     <meta property="og:title" content="IO Solutions — Canadian Customer Experience, Delivered" />
     <meta property="og:description" content="Bilingual customer care, sales and technical support for Canada's most demanding brands." />
     <meta property="og:type" content="website" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" as="image" href="/ios_logo_blue_black_text-en_white-no-subheader.png" />
     <script>document.documentElement.classList.add('js', 'is-loading')</script>
   </head>
   <body data-theme="dark">
     <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
+    <!-- Shared SVG gradients (brand teal → electric blue) -->
+    <svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="g-brand" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#00F5D4" />
+          <stop offset="1" stop-color="#0D92F4" />
+        </linearGradient>
+        <linearGradient id="g-brand-x" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#00C9B1" />
+          <stop offset="1" stop-color="#0D92F4" />
+        </linearGradient>
+        <linearGradient id="g-area" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#0D92F4" stop-opacity="0.22" />
+          <stop offset="1" stop-color="#00F5D4" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+    </svg>
+
     <!-- Preloader -->
     <div class="preloader" aria-hidden="true">
       <div class="preloader__panel"></div>
       <div class="preloader__inner">
-        <svg class="preloader__mark" viewBox="0 0 44 28">
-          <rect class="preloader__i" x="0" y="2" width="7" height="24" rx="3.5" />
-          <circle class="preloader__o" cx="28" cy="14" r="10.5" />
-          <circle class="preloader__core" cx="28" cy="14" r="3" />
-        </svg>
+        <img class="preloader__logo" src="/ios_logo_blue_black_text-en_white-no-subheader.png" alt="" width="353" height="85" />
         <div class="preloader__meta">
           <span class="preloader__tag" data-i18n="loader.tag">Connecting conversations</span>
           <span class="preloader__count"><span class="preloader__num">0</span>%</span>
@@ -43,21 +59,15 @@
       <div class="cursor__dot"></div>
     </div>
 
-    <div class="grain" aria-hidden="true"></div>
-
-    <!-- Navigation -->
-    <header class="nav">
+    <!-- Navigation (always navy: the logo is white-on-dark) -->
+    <header class="nav on-dark">
       <div class="nav__inner container">
-        <a class="logo" href="#top" aria-label="IO Solutions">
-          <svg class="logo__mark" viewBox="0 0 44 28" aria-hidden="true">
-            <rect x="0" y="2" width="7" height="24" rx="3.5" />
-            <circle cx="28" cy="14" r="10.5" fill="none" stroke="currentColor" stroke-width="5.5" />
-            <circle class="logo__core" cx="28" cy="14" r="3" />
-          </svg>
-          <span class="logo__word">IO Solutions</span>
+        <a class="logo" href="#top">
+          <img class="logo__img" src="/ios_logo_blue_black_text-en_white-no-subheader.png" alt="IO Solutions" width="353" height="85" />
         </a>
         <nav class="nav__links" aria-label="Primary">
           <a href="#services" data-scramble data-i18n="nav.services">Services</a>
+          <a href="#teams" data-scramble data-i18n="nav.teams">Teams</a>
           <a href="#why" data-scramble data-i18n="nav.why">Why IO</a>
           <a href="#footprint" data-scramble data-i18n="nav.footprint">Footprint</a>
           <a href="#industries" data-scramble data-i18n="nav.industries">Industries</a>
@@ -80,14 +90,15 @@
       <div class="nav__progress" aria-hidden="true"><i></i></div>
     </header>
 
-    <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu on-dark" id="menu" aria-hidden="true">
       <nav class="menu__links container" aria-label="Mobile">
         <a href="#services"><sup>01</sup><span data-i18n="nav.services">Services</span></a>
-        <a href="#why"><sup>02</sup><span data-i18n="nav.why">Why IO</span></a>
-        <a href="#footprint"><sup>03</sup><span data-i18n="nav.footprint">Footprint</span></a>
-        <a href="#industries"><sup>04</sup><span data-i18n="nav.industries">Industries</span></a>
-        <a href="#careers"><sup>05</sup><span data-i18n="nav.careers">Careers</span></a>
-        <a href="#contact"><sup>06</sup><span data-i18n="nav.contact">Contact</span></a>
+        <a href="#teams"><sup>02</sup><span data-i18n="nav.teams">Teams</span></a>
+        <a href="#why"><sup>03</sup><span data-i18n="nav.why">Why IO</span></a>
+        <a href="#footprint"><sup>04</sup><span data-i18n="nav.footprint">Footprint</span></a>
+        <a href="#industries"><sup>05</sup><span data-i18n="nav.industries">Industries</span></a>
+        <a href="#careers"><sup>06</sup><span data-i18n="nav.careers">Careers</span></a>
+        <a href="#contact"><sup>07</sup><span data-i18n="nav.contact">Contact</span></a>
       </nav>
       <div class="menu__foot container">
         <span data-i18n="menu.foot">Montréal · Charlottetown · Summerside · Alberton · Fredericton · Casablanca · Rabat · Philippines</span>
@@ -96,23 +107,32 @@
 
     <main id="main">
       <!-- ============ HERO ============ -->
-      <section class="hero" id="top" data-theme="dark">
+      <section class="hero on-dark" id="top" data-theme="dark">
+        <div class="hero__bg" aria-hidden="true">
+          <div class="hero__grid"></div>
+          <div class="hero__glow hero__glow--teal"></div>
+          <div class="hero__glow hero__glow--blue"></div>
+        </div>
         <canvas class="hero__wave" aria-hidden="true"></canvas>
-        <div class="hero__glow" aria-hidden="true"></div>
 
         <div class="hero__cards" aria-hidden="true">
           <div class="hcard hcard--call">
             <div class="hcard__row">
-              <span class="hcard__live"><i></i><span data-i18n="hero.card.incoming">Incoming call</span></span>
+              <span class="chip chip--live"><i></i><span data-i18n="hero.card.live">Live</span></span>
               <span class="hcard__timer">00:00</span>
             </div>
+            <p class="hcard__title" data-i18n="hero.card.incoming">Incoming call</p>
             <div class="hcard__bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
             <div class="hcard__row hcard__foot">
               <span>Montréal, QC</span>
-              <span class="hcard__tag">EN · FR</span>
+              <span class="chip chip--neutral">EN · FR</span>
             </div>
           </div>
           <div class="hcard hcard--chat">
+            <div class="hcard__row hcard__chat-head">
+              <span class="chip chip--active"><i></i><span data-i18n="ch.chat">Chat</span></span>
+              <span class="hcard__meta" data-i18n="hero.card.agent">Customer care</span>
+            </div>
             <p class="bubble bubble--in" data-i18n="hero.card.q">Hi! Can I upgrade my plan today?</p>
             <p class="bubble bubble--typing"><i></i><i></i><i></i></p>
             <p class="bubble bubble--out" data-i18n="hero.card.a">Absolutely — I can take care of that right now.</p>
@@ -127,19 +147,18 @@
         </div>
 
         <div class="hero__inner container">
-          <p class="eyebrow hero__eyebrow" data-hero-fade>
-            <span class="live-dot" aria-hidden="true"></span>
-            <span data-i18n="hero.eyebrow">Canadian CX partner since 2007</span>
+          <p class="chip chip--live hero__eyebrow" data-hero-fade>
+            <i></i><span data-i18n="hero.eyebrow">Canadian CX partner since 2007</span>
           </p>
           <h1 class="hero__title" data-split="hero" data-i18n="hero.title">Every conversation<br />builds your <em>brand.</em></h1>
           <div class="hero__bottom">
             <p class="hero__lead" data-hero-fade data-i18n="hero.lead">IO Solutions is a Canadian customer experience partner. Our bilingual teams deliver care, sales and technical support for some of the country's most demanding brands — from telecom to financial services.</p>
             <div class="hero__ctas" data-hero-fade>
-              <a class="btn btn--primary" href="#contact" data-magnetic>
+              <a class="btn btn--primary btn--lg" href="#contact" data-magnetic>
                 <span class="btn__label"><span data-i18n="hero.cta1">Talk to our team</span></span>
                 <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
               </a>
-              <a class="btn btn--ghost" href="#services" data-magnetic>
+              <a class="btn btn--outline btn--lg" href="#services" data-magnetic>
                 <span class="btn__label"><span data-i18n="hero.cta2">Explore services</span></span>
               </a>
             </div>
@@ -176,35 +195,51 @@
         </div>
       </section>
 
-      <!-- ============ STATEMENT + STATS ============ -->
-      <section class="statement section" id="about" data-theme="light">
+      <!-- ============ WHO WE ARE + METRICS ============ -->
+      <section class="about section" id="about" data-theme="light">
         <div class="container">
           <p class="eyebrow" data-reveal><span class="eyebrow__num">01</span><span data-i18n="about.eyebrow">Who we are</span></p>
-          <p class="statement__text" data-scrub-words data-i18n="about.text">We're the voice behind some of Canada's most trusted brands. For nearly two decades, IO Solutions has turned customer conversations into lasting relationships — with the care, precision and accountability your customers expect.</p>
+          <p class="statement" data-scrub-words data-i18n="about.text">We're the voice behind some of Canada's most trusted brands. For nearly two decades, IO Solutions has turned customer conversations into lasting relationships — with the care, precision and accountability your customers expect.</p>
 
-          <div class="stats">
-            <div class="stat" data-reveal>
-              <div class="stat__value"><span data-count-since="2007">19</span><sup>+</sup></div>
-              <p class="stat__label" data-i18n="stats.years">Years delivering customer experience</p>
-            </div>
-            <div class="stat" data-reveal>
-              <div class="stat__value"><span data-count="3">3</span></div>
-              <p class="stat__label" data-i18n="stats.continents">Continents, one operating standard</p>
-            </div>
-            <div class="stat" data-reveal>
-              <div class="stat__value"><span data-count="2">2</span></div>
-              <p class="stat__label" data-i18n="stats.languages">Official languages, served natively</p>
-            </div>
-            <div class="stat" data-reveal>
-              <div class="stat__value"><span data-count="24">24</span><span class="stat__small">/7</span></div>
-              <p class="stat__label" data-i18n="stats.coverage">Coverage across time zones</p>
-            </div>
+          <div class="metrics">
+            <article class="metric card card--hover" data-reveal>
+              <div class="metric__top">
+                <span class="metric__label" data-i18n="stats.l1">Experience</span>
+                <span class="chip chip--ok" data-i18n="stats.p1">Since 2007</span>
+              </div>
+              <div class="metric__value"><span data-count-since="2007">19</span><span class="metric__unit">+</span></div>
+              <p class="metric__text" data-i18n="stats.years">Years delivering customer experience</p>
+            </article>
+            <article class="metric card card--hover" data-reveal>
+              <div class="metric__top">
+                <span class="metric__label" data-i18n="stats.l2">Footprint</span>
+                <span class="chip chip--active">CA · MA · PH</span>
+              </div>
+              <div class="metric__value"><span data-count="3">3</span></div>
+              <p class="metric__text" data-i18n="stats.continents">Continents, one operating standard</p>
+            </article>
+            <article class="metric card card--hover" data-reveal>
+              <div class="metric__top">
+                <span class="metric__label" data-i18n="stats.l3">Languages</span>
+                <span class="chip chip--active">EN · FR</span>
+              </div>
+              <div class="metric__value"><span data-count="2">2</span></div>
+              <p class="metric__text" data-i18n="stats.languages">Official languages, served natively</p>
+            </article>
+            <article class="metric card card--hover" data-reveal>
+              <div class="metric__top">
+                <span class="metric__label" data-i18n="stats.l4">Coverage</span>
+                <span class="chip chip--live"><i></i><span data-i18n="stats.p4">Always on</span></span>
+              </div>
+              <div class="metric__value"><span data-count="24">24</span><span class="metric__unit">/7</span></div>
+              <p class="metric__text" data-i18n="stats.coverage">Coverage across time zones</p>
+            </article>
           </div>
         </div>
       </section>
 
       <!-- ============ SERVICES (horizontal) ============ -->
-      <section class="services" id="services" data-theme="dark">
+      <section class="services on-dark" id="services" data-theme="dark">
         <div class="services__pin">
           <div class="services__head container">
             <p class="eyebrow" data-reveal><span class="eyebrow__num">02</span><span data-i18n="services.eyebrow">What we do</span></p>
@@ -212,75 +247,75 @@
             <div class="services__progress" aria-hidden="true"><i></i></div>
           </div>
           <div class="services__track">
-            <article class="scard">
+            <article class="scard card card--dark">
               <div class="scard__top">
                 <span class="scard__num">01</span>
-                <svg class="scard__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2" /><rect x="3" y="14" width="4" height="6" rx="1.5" /><rect x="17" y="14" width="4" height="6" rx="1.5" /><path d="M19 20c0 1.1-2 2-5 2" /></svg>
+                <span class="icon-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2" /><rect x="3" y="14" width="4" height="6" rx="1.5" /><rect x="17" y="14" width="4" height="6" rx="1.5" /><path d="M19 20c0 1.1-2 2-5 2" /></svg></span>
               </div>
               <h3 class="scard__title" data-i18n="svc.1.title">Customer care</h3>
               <p class="scard__text" data-i18n="svc.1.text">Inbound voice, chat, email and social support that resolves on first contact and sounds like your brand.</p>
-              <ul class="tags">
-                <li data-i18n="svc.1.t1">Inbound voice</li><li data-i18n="svc.1.t2">Chat &amp; messaging</li><li data-i18n="svc.1.t3">Email &amp; social</li>
+              <ul class="chips-row">
+                <li class="chip chip--neutral" data-i18n="svc.1.t1">Inbound voice</li><li class="chip chip--neutral" data-i18n="svc.1.t2">Chat &amp; messaging</li><li class="chip chip--neutral" data-i18n="svc.1.t3">Email &amp; social</li>
               </ul>
             </article>
-            <article class="scard">
+            <article class="scard card card--dark">
               <div class="scard__top">
                 <span class="scard__num">02</span>
-                <svg class="scard__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8" /><path d="M15 7h6v6" /></svg>
+                <span class="icon-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8" /><path d="M15 7h6v6" /></svg></span>
               </div>
               <h3 class="scard__title" data-i18n="svc.2.title">Sales &amp; retention</h3>
               <p class="scard__text" data-i18n="svc.2.text">Consultative inbound and outbound teams that grow revenue, upgrade plans and win back at-risk customers.</p>
-              <ul class="tags">
-                <li data-i18n="svc.2.t1">Upsell &amp; cross-sell</li><li data-i18n="svc.2.t2">Win-back</li><li data-i18n="svc.2.t3">Lead qualification</li>
+              <ul class="chips-row">
+                <li class="chip chip--neutral" data-i18n="svc.2.t1">Upsell &amp; cross-sell</li><li class="chip chip--neutral" data-i18n="svc.2.t2">Win-back</li><li class="chip chip--neutral" data-i18n="svc.2.t3">Lead qualification</li>
               </ul>
             </article>
-            <article class="scard">
+            <article class="scard card card--dark">
               <div class="scard__top">
                 <span class="scard__num">03</span>
-                <svg class="scard__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2" /><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" /><rect x="10" y="10" width="4" height="4" rx=".5" /></svg>
+                <span class="icon-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2" /><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" /><rect x="10" y="10" width="4" height="4" rx=".5" /></svg></span>
               </div>
               <h3 class="scard__title" data-i18n="svc.3.title">Technical support</h3>
               <p class="scard__text" data-i18n="svc.3.text">Tier 1 and 2 troubleshooting for devices, connectivity and digital services — patient, precise and trained on your stack.</p>
-              <ul class="tags">
-                <li data-i18n="svc.3.t1">Tier 1–2</li><li data-i18n="svc.3.t2">Device &amp; network</li><li data-i18n="svc.3.t3">Digital services</li>
+              <ul class="chips-row">
+                <li class="chip chip--neutral" data-i18n="svc.3.t1">Tier 1–2</li><li class="chip chip--neutral" data-i18n="svc.3.t2">Device &amp; network</li><li class="chip chip--neutral" data-i18n="svc.3.t3">Digital services</li>
               </ul>
             </article>
-            <article class="scard">
+            <article class="scard card card--dark">
               <div class="scard__top">
                 <span class="scard__num">04</span>
-                <svg class="scard__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z" /><path d="M3 13l9 5 9-5" /><path d="M3 17.5l9 5 9-5" /></svg>
+                <span class="icon-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z" /><path d="M3 13l9 5 9-5" /><path d="M3 17.5l9 5 9-5" /></svg></span>
               </div>
               <h3 class="scard__title" data-i18n="svc.4.title">Back office</h3>
               <p class="scard__text" data-i18n="svc.4.text">Order processing, account management, verification and fulfilment handled with accuracy and full audit trails.</p>
-              <ul class="tags">
-                <li data-i18n="svc.4.t1">Order management</li><li data-i18n="svc.4.t2">Verification</li><li data-i18n="svc.4.t3">Data processing</li>
+              <ul class="chips-row">
+                <li class="chip chip--neutral" data-i18n="svc.4.t1">Order management</li><li class="chip chip--neutral" data-i18n="svc.4.t2">Verification</li><li class="chip chip--neutral" data-i18n="svc.4.t3">Data processing</li>
               </ul>
             </article>
-            <article class="scard">
+            <article class="scard card card--dark">
               <div class="scard__top">
                 <span class="scard__num">05</span>
-                <svg class="scard__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" /><path d="M2.5 10h19M6.5 15h4" /></svg>
+                <span class="icon-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" /><path d="M2.5 10h19M6.5 15h4" /></svg></span>
               </div>
               <h3 class="scard__title" data-i18n="svc.5.title">Billing &amp; collections</h3>
               <p class="scard__text" data-i18n="svc.5.text">Respectful billing support and early-stage collections that protect both revenue and relationships.</p>
-              <ul class="tags">
-                <li data-i18n="svc.5.t1">Billing inquiries</li><li data-i18n="svc.5.t2">Payment arrangements</li><li data-i18n="svc.5.t3">Early-stage collections</li>
+              <ul class="chips-row">
+                <li class="chip chip--neutral" data-i18n="svc.5.t1">Billing inquiries</li><li class="chip chip--neutral" data-i18n="svc.5.t2">Payment arrangements</li><li class="chip chip--neutral" data-i18n="svc.5.t3">Early-stage collections</li>
               </ul>
             </article>
-            <article class="scard">
+            <article class="scard card card--dark">
               <div class="scard__top">
                 <span class="scard__num">06</span>
-                <svg class="scard__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18" /><path d="M6 17v-4M11 17V8M16 17v-6M21 17V4" /></svg>
+                <span class="icon-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18" /><path d="M6 17v-4M11 17V8M16 17v-6M21 17V4" /></svg></span>
               </div>
               <h3 class="scard__title" data-i18n="svc.6.title">Quality &amp; insights</h3>
               <p class="scard__text" data-i18n="svc.6.text">QA scorecards, speech and text analytics and live reporting that turn every interaction into a decision.</p>
-              <ul class="tags">
-                <li data-i18n="svc.6.t1">QA programs</li><li data-i18n="svc.6.t2">Speech analytics</li><li data-i18n="svc.6.t3">Live dashboards</li>
+              <ul class="chips-row">
+                <li class="chip chip--neutral" data-i18n="svc.6.t1">QA programs</li><li class="chip chip--neutral" data-i18n="svc.6.t2">Speech analytics</li><li class="chip chip--neutral" data-i18n="svc.6.t3">Live dashboards</li>
               </ul>
             </article>
             <article class="scard scard--cta">
               <p class="scard__cta-text" data-i18n="svc.cta">Need a program that doesn't fit a box?</p>
-              <a class="btn btn--primary" href="#contact" data-magnetic>
+              <a class="btn btn--dark" href="#contact" data-magnetic>
                 <span class="btn__label"><span data-i18n="svc.ctaBtn">Design it with us</span></span>
                 <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
               </a>
@@ -289,17 +324,345 @@
         </div>
       </section>
 
+      <!-- ============ OUR TEAMS ============ -->
+      <section class="teams section" id="teams" data-theme="light">
+        <div class="container">
+          <div class="section-head section-head--row">
+            <div>
+              <p class="eyebrow" data-reveal><span class="eyebrow__num">03</span><span data-i18n="teams.eyebrow">Our teams</span></p>
+              <h2 class="h2" data-split data-i18n="teams.title">The people behind<br />every <em>conversation.</em></h2>
+            </div>
+            <p class="lead" data-reveal data-i18n="teams.lead">Specialized teams, one standard. Every program is staffed by dedicated experts — and backed by the IT, quality and workforce teams that keep it running.</p>
+          </div>
+
+          <div class="teams__ui" data-reveal>
+            <div class="teams__tabs" role="tablist" aria-label="Teams">
+              <button class="team-tab is-active" type="button" role="tab" id="tab-tech" aria-controls="team-tech" aria-selected="true">
+                <span class="team-tab__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg></span>
+                <span class="team-tab__name" data-i18n="team.tech.name">Technical support</span>
+                <span class="team-tab__bar" aria-hidden="true"><i></i></span>
+              </button>
+              <button class="team-tab" type="button" role="tab" id="tab-it" aria-controls="team-it" aria-selected="false" tabindex="-1">
+                <span class="team-tab__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="3" width="19" height="7.5" rx="2" /><rect x="2.5" y="13.5" width="19" height="7.5" rx="2" /><path d="M6.5 6.75h.01M6.5 17.25h.01M11 6.75h6M11 17.25h6" /></svg></span>
+                <span class="team-tab__name" data-i18n="team.it.name">IT &amp; systems</span>
+                <span class="team-tab__bar" aria-hidden="true"><i></i></span>
+              </button>
+              <button class="team-tab" type="button" role="tab" id="tab-sales" aria-controls="team-sales" aria-selected="false" tabindex="-1">
+                <span class="team-tab__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8" /><path d="M15 7h6v6" /></svg></span>
+                <span class="team-tab__name" data-i18n="team.sales.name">Sales</span>
+                <span class="team-tab__bar" aria-hidden="true"><i></i></span>
+              </button>
+              <button class="team-tab" type="button" role="tab" id="tab-care" aria-controls="team-care" aria-selected="false" tabindex="-1">
+                <span class="team-tab__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2" /><rect x="3" y="14" width="4" height="6" rx="1.5" /><rect x="17" y="14" width="4" height="6" rx="1.5" /><path d="M19 20c0 1.1-2 2-5 2" /></svg></span>
+                <span class="team-tab__name" data-i18n="team.care.name">Customer care</span>
+                <span class="team-tab__bar" aria-hidden="true"><i></i></span>
+              </button>
+              <button class="team-tab" type="button" role="tab" id="tab-quality" aria-controls="team-quality" aria-selected="false" tabindex="-1">
+                <span class="team-tab__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6" /><path d="M8.5 13.9L7.5 22l4.5-2.5 4.5 2.5-1-8.1" /><path d="M9.6 9l1.6 1.6L14.4 7.4" /></svg></span>
+                <span class="team-tab__name" data-i18n="team.quality.name">Quality &amp; training</span>
+                <span class="team-tab__bar" aria-hidden="true"><i></i></span>
+              </button>
+              <button class="team-tab" type="button" role="tab" id="tab-wfm" aria-controls="team-wfm" aria-selected="false" tabindex="-1">
+                <span class="team-tab__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16.5" rx="2" /><path d="M16 2.5v4M8 2.5v4M3 9.5h18" /><path d="M12 13v2.5l1.75 1.25" /></svg></span>
+                <span class="team-tab__name" data-i18n="team.wfm.name">Workforce management</span>
+                <span class="team-tab__bar" aria-hidden="true"><i></i></span>
+              </button>
+              <button class="team-tab" type="button" role="tab" id="tab-backoffice" aria-controls="team-backoffice" aria-selected="false" tabindex="-1">
+                <span class="team-tab__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2.5H6.5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V8z" /><path d="M14 2.5V8h5.5" /><path d="M8.5 13h7M8.5 17h7" /></svg></span>
+                <span class="team-tab__name" data-i18n="team.backoffice.name">Back office</span>
+                <span class="team-tab__bar" aria-hidden="true"><i></i></span>
+              </button>
+            </div>
+
+            <div class="teams__panels">
+              <!-- Technical support -->
+              <article class="team-panel card is-active" id="team-tech" role="tabpanel" aria-labelledby="tab-tech">
+                <header class="team-panel__head">
+                  <span class="icon-tile icon-tile--lg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg></span>
+                  <div>
+                    <h3 class="team-panel__name" data-i18n="team.tech.name">Technical support</h3>
+                    <p class="team-panel__role" data-i18n="team.tech.role">Tier 1 and 2 troubleshooting for devices, connectivity and digital services — patient, precise and trained on your systems.</p>
+                  </div>
+                </header>
+                <div class="team-panel__body">
+                  <div>
+                    <p class="team-panel__label" data-i18n="teams.handles">What they handle</p>
+                    <ul class="checklist">
+                      <li data-i18n="team.tech.l1">Device setup and troubleshooting</li>
+                      <li data-i18n="team.tech.l2">Internet, TV and wireless connectivity</li>
+                      <li data-i18n="team.tech.l3">Apps, accounts and sign-in</li>
+                      <li data-i18n="team.tech.l4">Clean escalations to tier 3</li>
+                    </ul>
+                  </div>
+                  <div class="feed card--dark on-dark">
+                    <div class="feed__head"><span data-i18n="teams.shift">A typical shift</span><span class="feed__clock" data-clock="America/Toronto">--:--</span></div>
+                    <ul class="feed__list">
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.voice">Voice</span><span class="feed__text" data-i18n="team.tech.f1">Modem offline — line test and reset</span><span class="chip chip--ok"><i></i><span data-i18n="st.resolved">Resolved</span></span></li>
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.chat">Chat</span><span class="feed__text" data-i18n="team.tech.f2">eSIM activation on a new phone</span><span class="chip chip--active"><i></i><span data-i18n="st.progress">In progress</span></span></li>
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.email">Email</span><span class="feed__text" data-i18n="team.tech.f3">Intermittent Wi-Fi — technician visit booked</span><span class="chip chip--alert"><i></i><span data-i18n="st.escalated">Escalated</span></span></li>
+                    </ul>
+                  </div>
+                </div>
+                <footer class="team-panel__foot">
+                  <ul class="chips-row">
+                    <li class="chip chip--neutral" data-i18n="ch.voice">Voice</li><li class="chip chip--neutral" data-i18n="ch.chat">Chat</li><li class="chip chip--neutral" data-i18n="ch.email">Email</li><li class="chip chip--neutral" data-i18n="ch.remote">Remote assist</li>
+                  </ul>
+                  <a class="btn btn--primary btn--sm" href="#contact" data-need="tech">
+                    <span class="btn__label"><span data-i18n="team.tech.cta">Talk to our tech team</span></span>
+                    <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+                  </a>
+                </footer>
+              </article>
+
+              <!-- IT & systems -->
+              <article class="team-panel card" id="team-it" role="tabpanel" aria-labelledby="tab-it">
+                <header class="team-panel__head">
+                  <span class="icon-tile icon-tile--lg"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="3" width="19" height="7.5" rx="2" /><rect x="2.5" y="13.5" width="19" height="7.5" rx="2" /><path d="M6.5 6.75h.01M6.5 17.25h.01M11 6.75h6M11 17.25h6" /></svg></span>
+                  <div>
+                    <h3 class="team-panel__name" data-i18n="team.it.name">IT &amp; systems</h3>
+                    <p class="team-panel__role" data-i18n="team.it.role">The engineers who keep every site, line and login secure, connected and running around the clock.</p>
+                  </div>
+                </header>
+                <div class="team-panel__body">
+                  <div>
+                    <p class="team-panel__label" data-i18n="teams.handles">What they handle</p>
+                    <ul class="checklist">
+                      <li data-i18n="team.it.l1">Contact-center telephony and platforms</li>
+                      <li data-i18n="team.it.l2">Network, endpoint and access security</li>
+                      <li data-i18n="team.it.l3">CRM and tool integrations</li>
+                      <li data-i18n="team.it.l4">Monitoring and incident response</li>
+                    </ul>
+                  </div>
+                  <div class="feed card--dark on-dark">
+                    <div class="feed__head"><span data-i18n="teams.shift">A typical shift</span><span class="feed__clock" data-clock="America/Toronto">--:--</span></div>
+                    <ul class="feed__list">
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.network">Network</span><span class="feed__text" data-i18n="team.it.f1">Site failover drill</span><span class="chip chip--ok"><i></i><span data-i18n="st.passed">Passed</span></span></li>
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.security">Security</span><span class="feed__text" data-i18n="team.it.f2">Access review for a new program</span><span class="chip chip--active"><i></i><span data-i18n="st.progress">In progress</span></span></li>
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.telephony">Telephony</span><span class="feed__text" data-i18n="team.it.f3">IVR update deployed</span><span class="chip chip--ok"><i></i><span data-i18n="st.live">Live</span></span></li>
+                    </ul>
+                  </div>
+                </div>
+                <footer class="team-panel__foot">
+                  <ul class="chips-row">
+                    <li class="chip chip--neutral" data-i18n="ch.telephony">Telephony</li><li class="chip chip--neutral" data-i18n="ch.network">Network</li><li class="chip chip--neutral" data-i18n="ch.security">Security</li><li class="chip chip--neutral" data-i18n="ch.integrations">Integrations</li>
+                  </ul>
+                  <a class="btn btn--primary btn--sm" href="#contact" data-need="other">
+                    <span class="btn__label"><span data-i18n="team.it.cta">Ask about our infrastructure</span></span>
+                    <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+                  </a>
+                </footer>
+              </article>
+
+              <!-- Sales -->
+              <article class="team-panel card" id="team-sales" role="tabpanel" aria-labelledby="tab-sales">
+                <header class="team-panel__head">
+                  <span class="icon-tile icon-tile--lg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8" /><path d="M15 7h6v6" /></svg></span>
+                  <div>
+                    <h3 class="team-panel__name" data-i18n="team.sales.name">Sales</h3>
+                    <p class="team-panel__role" data-i18n="team.sales.role">Consultative inbound and outbound sellers who grow revenue the right way — with compliant scripts and real product knowledge.</p>
+                  </div>
+                </header>
+                <div class="team-panel__body">
+                  <div>
+                    <p class="team-panel__label" data-i18n="teams.handles">What they handle</p>
+                    <ul class="checklist">
+                      <li data-i18n="team.sales.l1">New activations and onboarding</li>
+                      <li data-i18n="team.sales.l2">Upgrades and cross-sell</li>
+                      <li data-i18n="team.sales.l3">Retention and win-back</li>
+                      <li data-i18n="team.sales.l4">Lead qualification</li>
+                    </ul>
+                  </div>
+                  <div class="feed card--dark on-dark">
+                    <div class="feed__head"><span data-i18n="teams.shift">A typical shift</span><span class="feed__clock" data-clock="America/Toronto">--:--</span></div>
+                    <ul class="feed__list">
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.voice">Voice</span><span class="feed__text" data-i18n="team.sales.f1">Plan upgrade — faster internet tier</span><span class="chip chip--ok"><i></i><span data-i18n="st.closed">Closed</span></span></li>
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.chat">Chat</span><span class="feed__text" data-i18n="team.sales.f2">Bundle quote — home and mobile</span><span class="chip chip--active"><i></i><span data-i18n="st.followup">Follow-up</span></span></li>
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.voice">Voice</span><span class="feed__text" data-i18n="team.sales.f3">Cancellation request — retention offer</span><span class="chip chip--ok"><i></i><span data-i18n="st.saved">Saved</span></span></li>
+                    </ul>
+                  </div>
+                </div>
+                <footer class="team-panel__foot">
+                  <ul class="chips-row">
+                    <li class="chip chip--neutral" data-i18n="ch.inbound">Inbound</li><li class="chip chip--neutral" data-i18n="ch.outbound">Outbound</li><li class="chip chip--neutral" data-i18n="ch.chat">Chat</li><li class="chip chip--neutral" data-i18n="ch.retention">Retention</li>
+                  </ul>
+                  <a class="btn btn--primary btn--sm" href="#contact" data-need="sales">
+                    <span class="btn__label"><span data-i18n="team.sales.cta">Talk to our sales team</span></span>
+                    <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+                  </a>
+                </footer>
+              </article>
+
+              <!-- Customer care -->
+              <article class="team-panel card" id="team-care" role="tabpanel" aria-labelledby="tab-care">
+                <header class="team-panel__head">
+                  <span class="icon-tile icon-tile--lg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2" /><rect x="3" y="14" width="4" height="6" rx="1.5" /><rect x="17" y="14" width="4" height="6" rx="1.5" /><path d="M19 20c0 1.1-2 2-5 2" /></svg></span>
+                  <div>
+                    <h3 class="team-panel__name" data-i18n="team.care.name">Customer care</h3>
+                    <p class="team-panel__role" data-i18n="team.care.role">Bilingual agents who resolve on first contact, de-escalate with empathy and sound like your brand.</p>
+                  </div>
+                </header>
+                <div class="team-panel__body">
+                  <div>
+                    <p class="team-panel__label" data-i18n="teams.handles">What they handle</p>
+                    <ul class="checklist">
+                      <li data-i18n="team.care.l1">Billing and account questions</li>
+                      <li data-i18n="team.care.l2">Orders, moves and changes</li>
+                      <li data-i18n="team.care.l3">Complaints and escalations</li>
+                      <li data-i18n="team.care.l4">Loyalty and recognition</li>
+                    </ul>
+                  </div>
+                  <div class="feed card--dark on-dark">
+                    <div class="feed__head"><span data-i18n="teams.shift">A typical shift</span><span class="feed__clock" data-clock="America/Toronto">--:--</span></div>
+                    <ul class="feed__list">
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.voice">Voice</span><span class="feed__text" data-i18n="team.care.f1">Billing question — explained and credited</span><span class="chip chip--ok"><i></i><span data-i18n="st.resolved">Resolved</span></span></li>
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.chat">Chat</span><span class="feed__text" data-i18n="team.care.f2">Change of address</span><span class="chip chip--ok"><i></i><span data-i18n="st.resolved">Resolved</span></span></li>
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.social">Social</span><span class="feed__text" data-i18n="team.care.f3">Service complaint — callback booked</span><span class="chip chip--active"><i></i><span data-i18n="st.progress">In progress</span></span></li>
+                    </ul>
+                  </div>
+                </div>
+                <footer class="team-panel__foot">
+                  <ul class="chips-row">
+                    <li class="chip chip--neutral" data-i18n="ch.voice">Voice</li><li class="chip chip--neutral" data-i18n="ch.chat">Chat</li><li class="chip chip--neutral" data-i18n="ch.email">Email</li><li class="chip chip--neutral" data-i18n="ch.social">Social</li>
+                  </ul>
+                  <a class="btn btn--primary btn--sm" href="#contact" data-need="care">
+                    <span class="btn__label"><span data-i18n="team.care.cta">Talk to our care team</span></span>
+                    <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+                  </a>
+                </footer>
+              </article>
+
+              <!-- Quality & training -->
+              <article class="team-panel card" id="team-quality" role="tabpanel" aria-labelledby="tab-quality">
+                <header class="team-panel__head">
+                  <span class="icon-tile icon-tile--lg"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6" /><path d="M8.5 13.9L7.5 22l4.5-2.5 4.5 2.5-1-8.1" /><path d="M9.6 9l1.6 1.6L14.4 7.4" /></svg></span>
+                  <div>
+                    <h3 class="team-panel__name" data-i18n="team.quality.name">Quality &amp; training</h3>
+                    <p class="team-panel__role" data-i18n="team.quality.role">Coaches and analysts who calibrate, train and coach every week, so performance keeps climbing after launch.</p>
+                  </div>
+                </header>
+                <div class="team-panel__body">
+                  <div>
+                    <p class="team-panel__label" data-i18n="teams.handles">What they handle</p>
+                    <ul class="checklist">
+                      <li data-i18n="team.quality.l1">QA scorecards and calibration</li>
+                      <li data-i18n="team.quality.l2">Speech and text analytics</li>
+                      <li data-i18n="team.quality.l3">Onboarding academies</li>
+                      <li data-i18n="team.quality.l4">Ongoing one-on-one coaching</li>
+                    </ul>
+                  </div>
+                  <div class="feed card--dark on-dark">
+                    <div class="feed__head"><span data-i18n="teams.shift">A typical shift</span><span class="feed__clock" data-clock="America/Toronto">--:--</span></div>
+                    <ul class="feed__list">
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.qa">QA</span><span class="feed__text" data-i18n="team.quality.f1">Weekly calibration session</span><span class="chip chip--ok"><i></i><span data-i18n="st.done">Done</span></span></li>
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.analytics">Analytics</span><span class="feed__text" data-i18n="team.quality.f2">Customer sentiment review</span><span class="chip chip--active"><i></i><span data-i18n="st.progress">In progress</span></span></li>
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.coaching">Coaching</span><span class="feed__text" data-i18n="team.quality.f3">New-hire cohort graduation</span><span class="chip chip--active"><i></i><span data-i18n="st.scheduled">Scheduled</span></span></li>
+                    </ul>
+                  </div>
+                </div>
+                <footer class="team-panel__foot">
+                  <ul class="chips-row">
+                    <li class="chip chip--neutral" data-i18n="ch.qa">QA</li><li class="chip chip--neutral" data-i18n="ch.analytics">Analytics</li><li class="chip chip--neutral" data-i18n="ch.coaching">Coaching</li><li class="chip chip--neutral" data-i18n="ch.elearning">e-Learning</li>
+                  </ul>
+                  <a class="btn btn--primary btn--sm" href="#contact" data-need="other">
+                    <span class="btn__label"><span data-i18n="team.quality.cta">See how we coach</span></span>
+                    <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+                  </a>
+                </footer>
+              </article>
+
+              <!-- Workforce management -->
+              <article class="team-panel card" id="team-wfm" role="tabpanel" aria-labelledby="tab-wfm">
+                <header class="team-panel__head">
+                  <span class="icon-tile icon-tile--lg"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16.5" rx="2" /><path d="M16 2.5v4M8 2.5v4M3 9.5h18" /><path d="M12 13v2.5l1.75 1.25" /></svg></span>
+                  <div>
+                    <h3 class="team-panel__name" data-i18n="team.wfm.name">Workforce management</h3>
+                    <p class="team-panel__role" data-i18n="team.wfm.role">Forecasters and real-time analysts who put the right agent on the right line at the right time.</p>
+                  </div>
+                </header>
+                <div class="team-panel__body">
+                  <div>
+                    <p class="team-panel__label" data-i18n="teams.handles">What they handle</p>
+                    <ul class="checklist">
+                      <li data-i18n="team.wfm.l1">Volume forecasting</li>
+                      <li data-i18n="team.wfm.l2">Scheduling and intraday management</li>
+                      <li data-i18n="team.wfm.l3">Real-time adherence</li>
+                      <li data-i18n="team.wfm.l4">Capacity planning</li>
+                    </ul>
+                  </div>
+                  <div class="feed card--dark on-dark">
+                    <div class="feed__head"><span data-i18n="teams.shift">A typical shift</span><span class="feed__clock" data-clock="America/Toronto">--:--</span></div>
+                    <ul class="feed__list">
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.forecast">Forecasting</span><span class="feed__text" data-i18n="team.wfm.f1">Holiday peak forecast</span><span class="chip chip--ok"><i></i><span data-i18n="st.approved">Approved</span></span></li>
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.realtime">Real-time</span><span class="feed__text" data-i18n="team.wfm.f2">Intraday shift to the chat queue</span><span class="chip chip--ok"><i></i><span data-i18n="st.live">Live</span></span></li>
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.planning">Planning</span><span class="feed__text" data-i18n="team.wfm.f3">Next-quarter capacity plan</span><span class="chip chip--active"><i></i><span data-i18n="st.review">In review</span></span></li>
+                    </ul>
+                  </div>
+                </div>
+                <footer class="team-panel__foot">
+                  <ul class="chips-row">
+                    <li class="chip chip--neutral" data-i18n="ch.forecast">Forecasting</li><li class="chip chip--neutral" data-i18n="ch.scheduling">Scheduling</li><li class="chip chip--neutral" data-i18n="ch.realtime">Real-time</li><li class="chip chip--neutral" data-i18n="ch.planning">Planning</li>
+                  </ul>
+                  <a class="btn btn--primary btn--sm" href="#contact" data-need="other">
+                    <span class="btn__label"><span data-i18n="team.wfm.cta">Plan capacity with us</span></span>
+                    <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+                  </a>
+                </footer>
+              </article>
+
+              <!-- Back office -->
+              <article class="team-panel card" id="team-backoffice" role="tabpanel" aria-labelledby="tab-backoffice">
+                <header class="team-panel__head">
+                  <span class="icon-tile icon-tile--lg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2.5H6.5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V8z" /><path d="M14 2.5V8h5.5" /><path d="M8.5 13h7M8.5 17h7" /></svg></span>
+                  <div>
+                    <h3 class="team-panel__name" data-i18n="team.backoffice.name">Back office</h3>
+                    <p class="team-panel__role" data-i18n="team.backoffice.role">Detail-driven specialists behind every order, verification and record — accurate, auditable and on time.</p>
+                  </div>
+                </header>
+                <div class="team-panel__body">
+                  <div>
+                    <p class="team-panel__label" data-i18n="teams.handles">What they handle</p>
+                    <ul class="checklist">
+                      <li data-i18n="team.backoffice.l1">Order processing</li>
+                      <li data-i18n="team.backoffice.l2">Identity and document verification</li>
+                      <li data-i18n="team.backoffice.l3">Data entry and clean-up</li>
+                      <li data-i18n="team.backoffice.l4">Fulfilment follow-up</li>
+                    </ul>
+                  </div>
+                  <div class="feed card--dark on-dark">
+                    <div class="feed__head"><span data-i18n="teams.shift">A typical shift</span><span class="feed__clock" data-clock="America/Toronto">--:--</span></div>
+                    <ul class="feed__list">
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.orders">Orders</span><span class="feed__text" data-i18n="team.backoffice.f1">Device order — verified and shipped</span><span class="chip chip--ok"><i></i><span data-i18n="st.complete">Complete</span></span></li>
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.verification">Verification</span><span class="feed__text" data-i18n="team.backoffice.f2">Account ownership check</span><span class="chip chip--active"><i></i><span data-i18n="st.progress">In progress</span></span></li>
+                      <li class="feed__row"><span class="chip chip--neutral" data-i18n="ch.data">Data</span><span class="feed__text" data-i18n="team.backoffice.f3">CRM record clean-up</span><span class="chip chip--ok"><i></i><span data-i18n="st.complete">Complete</span></span></li>
+                    </ul>
+                  </div>
+                </div>
+                <footer class="team-panel__foot">
+                  <ul class="chips-row">
+                    <li class="chip chip--neutral" data-i18n="ch.orders">Orders</li><li class="chip chip--neutral" data-i18n="ch.verification">Verification</li><li class="chip chip--neutral" data-i18n="ch.data">Data</li><li class="chip chip--neutral" data-i18n="ch.fulfilment">Fulfilment</li>
+                  </ul>
+                  <a class="btn btn--primary btn--sm" href="#contact" data-need="backoffice">
+                    <span class="btn__label"><span data-i18n="team.backoffice.cta">Talk to our back-office team</span></span>
+                    <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+                  </a>
+                </footer>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ============ WHY IO (bento) ============ -->
       <section class="why section" id="why" data-theme="light">
         <div class="container">
           <div class="section-head">
-            <p class="eyebrow" data-reveal><span class="eyebrow__num">03</span><span data-i18n="why.eyebrow">Why IO</span></p>
+            <p class="eyebrow" data-reveal><span class="eyebrow__num">04</span><span data-i18n="why.eyebrow">Why IO</span></p>
             <h2 class="h2" data-split data-i18n="why.title">The IO <em>standard.</em></h2>
             <p class="lead section-head__lead" data-reveal data-i18n="why.lead">Enterprise-grade delivery with the attention of a partner who picks up the phone. Here is what our clients count on.</p>
           </div>
 
           <div class="bento">
-            <article class="tile tile--onshore" data-reveal data-spotlight>
+            <article class="tile tile--onshore card card--hover" data-reveal data-spotlight>
               <div class="tile__visual onshore">
                 <span>QC</span><span>PE</span><span>NB</span>
               </div>
@@ -309,7 +672,7 @@
               </div>
             </article>
 
-            <article class="tile tile--bilingual tile--dark" data-reveal data-spotlight>
+            <article class="tile tile--bilingual card card--dark on-dark" data-reveal data-spotlight>
               <div class="tile__visual bilingual">
                 <span class="bilingual__word" data-greeting>Bonjour</span>
                 <span class="bilingual__caret" aria-hidden="true"></span>
@@ -320,7 +683,7 @@
               </div>
             </article>
 
-            <article class="tile tile--shore" data-reveal data-spotlight>
+            <article class="tile tile--shore card card--hover" data-reveal data-spotlight>
               <div class="tile__visual shore">
                 <div class="shore__row"><span>Canada</span><i style="--w: 64%"></i></div>
                 <div class="shore__row"><span data-i18n="why.3.ma">Morocco</span><i style="--w: 22%"></i></div>
@@ -332,7 +695,7 @@
               </div>
             </article>
 
-            <article class="tile tile--telecom" data-reveal data-spotlight>
+            <article class="tile tile--telecom card card--hover" data-reveal data-spotlight>
               <div class="tile__visual signal" aria-hidden="true">
                 <i></i><i></i><i></i><i></i><i></i>
               </div>
@@ -342,7 +705,7 @@
               </div>
             </article>
 
-            <article class="tile tile--clock" data-reveal data-spotlight>
+            <article class="tile tile--clock card card--hover" data-reveal data-spotlight>
               <div class="tile__visual clock" aria-hidden="true">
                 <svg viewBox="0 0 100 100">
                   <circle cx="50" cy="50" r="46" class="clock__face" />
@@ -359,7 +722,7 @@
               </div>
             </article>
 
-            <article class="tile tile--secure" data-reveal data-spotlight>
+            <article class="tile tile--secure card card--hover" data-reveal data-spotlight>
               <div class="tile__visual secure" aria-hidden="true">
                 <svg viewBox="0 0 64 64"><path class="secure__shield" d="M32 6l20 7v16c0 13-8.5 23-20 29C20.5 52 12 42 12 29V13l20-7z" /><path class="secure__check" d="M23 32l6.5 6.5L42 26" /></svg>
               </div>
@@ -369,7 +732,7 @@
               </div>
             </article>
 
-            <article class="tile tile--ramp" data-reveal data-spotlight>
+            <article class="tile tile--ramp card card--hover" data-reveal data-spotlight>
               <div class="tile__visual ramp" aria-hidden="true">
                 <svg viewBox="0 0 300 120" preserveAspectRatio="none">
                   <path class="ramp__grid" d="M0 30H300M0 60H300M0 90H300" />
@@ -390,7 +753,7 @@
       <section class="process section" id="process" data-theme="light">
         <div class="container process__grid">
           <div class="process__side">
-            <p class="eyebrow" data-reveal><span class="eyebrow__num">04</span><span data-i18n="process.eyebrow">How we launch</span></p>
+            <p class="eyebrow" data-reveal><span class="eyebrow__num">05</span><span data-i18n="process.eyebrow">How we launch</span></p>
             <h2 class="h2" data-split data-i18n="process.title">From first call<br />to <em>full speed.</em></h2>
             <p class="lead" data-reveal data-i18n="process.lead">A proven five-step path that takes your program from kickoff to steady-state performance, without surprises.</p>
           </div>
@@ -436,11 +799,11 @@
       </section>
 
       <!-- ============ FOOTPRINT (globe) ============ -->
-      <section class="footprint" id="footprint" data-theme="dark">
+      <section class="footprint on-dark" id="footprint" data-theme="dark">
         <div class="footprint__pin">
           <div class="container footprint__grid">
             <div class="footprint__copy">
-              <p class="eyebrow" data-reveal><span class="eyebrow__num">05</span><span data-i18n="fp.eyebrow">Our footprint</span></p>
+              <p class="eyebrow" data-reveal><span class="eyebrow__num">06</span><span data-i18n="fp.eyebrow">Our footprint</span></p>
               <h2 class="h2" data-split data-i18n="fp.title">One standard.<br /><em>Three continents.</em></h2>
 
               <div class="regions" role="tablist" aria-label="Regions">
@@ -451,7 +814,7 @@
                   </span>
                   <span class="region__body">
                     <span class="region__sites">Montréal (HQ) · Charlottetown · Summerside · Alberton · Fredericton</span>
-                    <span class="region__langs" data-i18n="fp.r1">English &amp; French · Onshore</span>
+                    <span class="chip chip--active region__langs" data-i18n="fp.r1">English &amp; French · Onshore</span>
                   </span>
                 </button>
                 <button class="region" role="tab" aria-selected="false" data-region="1">
@@ -461,7 +824,7 @@
                   </span>
                   <span class="region__body">
                     <span class="region__sites">Casablanca · Rabat</span>
-                    <span class="region__langs" data-i18n="fp.r2">French &amp; English · Offshore</span>
+                    <span class="chip chip--active region__langs" data-i18n="fp.r2">French &amp; English · Offshore</span>
                   </span>
                 </button>
                 <button class="region" role="tab" aria-selected="false" data-region="2">
@@ -471,7 +834,7 @@
                   </span>
                   <span class="region__body">
                     <span class="region__sites" data-i18n="fp.ph">Philippines delivery centre</span>
-                    <span class="region__langs" data-i18n="fp.r3">English · Offshore</span>
+                    <span class="chip chip--active region__langs" data-i18n="fp.r3">English · Offshore</span>
                   </span>
                 </button>
               </div>
@@ -488,7 +851,7 @@
         <div class="container">
           <div class="section-head section-head--row">
             <div>
-              <p class="eyebrow" data-reveal><span class="eyebrow__num">06</span><span data-i18n="ind.eyebrow">Industries</span></p>
+              <p class="eyebrow" data-reveal><span class="eyebrow__num">07</span><span data-i18n="ind.eyebrow">Industries</span></p>
               <h2 class="h2" data-split data-i18n="ind.title">Fluent in <em>your</em> business.</h2>
             </div>
             <p class="lead" data-reveal data-i18n="ind.lead">Specialized teams for the sectors where every interaction carries weight.</p>
@@ -555,37 +918,41 @@
       </section>
 
       <!-- ============ CAREERS ============ -->
-      <section class="careers section" id="careers" data-theme="accent">
-        <div class="container careers__grid">
-          <div>
-            <p class="eyebrow" data-reveal><span class="eyebrow__num">07</span><span data-i18n="careers.eyebrow">Careers</span></p>
-            <h2 class="careers__title" data-split data-i18n="careers.title">Your career,<br /><em>amplified.</em></h2>
-          </div>
-          <div class="careers__side">
-            <p class="careers__cities" aria-live="off">
-              <span data-i18n="careers.hiring">Now hiring in</span>
-              <span class="careers__city"><span data-city>Montréal</span></span>
-            </p>
-            <p class="lead" data-reveal data-i18n="careers.lead">Join a team that invests in people: full training, real career paths and bilingual opportunities in communities across Canada and beyond.</p>
-            <ul class="perks" data-reveal>
-              <li data-i18n="careers.p1">Complete onboarding &amp; training</li>
-              <li data-i18n="careers.p2">Paths into leadership</li>
-              <li data-i18n="careers.p3">Bilingual roles</li>
-              <li data-i18n="careers.p4">On-site &amp; remote options</li>
-            </ul>
-            <a class="btn btn--dark" href="https://iosolutions.ca/current-opportunities" target="_blank" rel="noopener" data-magnetic>
-              <span class="btn__label"><span data-i18n="careers.cta">View open roles</span></span>
-              <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9" /></svg></span>
-            </a>
+      <section class="careers section" id="careers" data-theme="light">
+        <div class="container">
+          <div class="careers__panel" data-reveal>
+            <div class="careers__grid">
+              <div>
+                <p class="eyebrow eyebrow--ink"><span class="eyebrow__num">08</span><span data-i18n="careers.eyebrow">Careers</span></p>
+                <h2 class="careers__title" data-split data-i18n="careers.title">Your career,<br /><em>amplified.</em></h2>
+              </div>
+              <div class="careers__side">
+                <p class="careers__cities" aria-live="off">
+                  <span data-i18n="careers.hiring">Now hiring in</span>
+                  <span class="careers__city"><span data-city>Montréal</span></span>
+                </p>
+                <p class="careers__lead" data-i18n="careers.lead">Join a team that invests in people: full training, real career paths and bilingual opportunities in communities across Canada and beyond.</p>
+                <ul class="perks">
+                  <li data-i18n="careers.p1">Complete onboarding &amp; training</li>
+                  <li data-i18n="careers.p2">Paths into leadership</li>
+                  <li data-i18n="careers.p3">Bilingual roles</li>
+                  <li data-i18n="careers.p4">On-site &amp; remote options</li>
+                </ul>
+                <a class="btn btn--dark" href="https://iosolutions.ca/current-opportunities" target="_blank" rel="noopener" data-magnetic>
+                  <span class="btn__label"><span data-i18n="careers.cta">View open roles</span></span>
+                  <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9" /></svg></span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- ============ CONTACT ============ -->
-      <section class="contact section" id="contact" data-theme="dark">
+      <section class="contact section on-dark" id="contact" data-theme="dark">
         <div class="container contact__grid">
           <div class="contact__copy">
-            <p class="eyebrow" data-reveal><span class="eyebrow__num">08</span><span data-i18n="contact.eyebrow">Contact</span></p>
+            <p class="eyebrow" data-reveal><span class="eyebrow__num">09</span><span data-i18n="contact.eyebrow">Contact</span></p>
             <h2 class="h2" data-split data-i18n="contact.title">Let's build your next <em>customer experience.</em></h2>
             <p class="lead" data-reveal data-i18n="contact.lead">Tell us about your program — volumes, channels, languages — and a solutions lead will reach out to plan the next step with you.</p>
             <ul class="contact__points" data-reveal>
@@ -598,20 +965,20 @@
           <form class="form" novalidate data-endpoint="" data-reveal>
             <div class="form__grid">
               <label class="field">
-                <input type="text" name="name" autocomplete="name" required placeholder=" " />
-                <span data-i18n="form.name">Full name</span>
+                <span class="field__label" data-i18n="form.name">Full name</span>
+                <input type="text" name="name" autocomplete="name" required placeholder="Your name" data-i18n-ph="form.ph.name" />
               </label>
               <label class="field">
-                <input type="email" name="email" autocomplete="email" required placeholder=" " />
-                <span data-i18n="form.email">Work email</span>
+                <span class="field__label" data-i18n="form.email">Work email</span>
+                <input type="email" name="email" autocomplete="email" required placeholder="name@company.com" data-i18n-ph="form.ph.email" />
               </label>
               <label class="field field--full">
-                <input type="text" name="company" autocomplete="organization" required placeholder=" " />
-                <span data-i18n="form.company">Company</span>
+                <span class="field__label" data-i18n="form.company">Company</span>
+                <input type="text" name="company" autocomplete="organization" required placeholder="Company name" data-i18n-ph="form.ph.company" />
               </label>
             </div>
-            <fieldset class="chips">
-              <legend data-i18n="form.need">What do you need?</legend>
+            <fieldset class="choice">
+              <legend class="field__label" data-i18n="form.need">What do you need?</legend>
               <label><input type="checkbox" name="need" value="care" /><span data-i18n="form.c1">Customer care</span></label>
               <label><input type="checkbox" name="need" value="sales" /><span data-i18n="form.c2">Sales</span></label>
               <label><input type="checkbox" name="need" value="tech" /><span data-i18n="form.c3">Tech support</span></label>
@@ -619,8 +986,8 @@
               <label><input type="checkbox" name="need" value="other" /><span data-i18n="form.c5">Something else</span></label>
             </fieldset>
             <label class="field field--full field--area">
-              <textarea name="message" rows="4" placeholder=" "></textarea>
-              <span data-i18n="form.message">Tell us about your program</span>
+              <span class="field__label" data-i18n="form.message">Tell us about your program</span>
+              <textarea name="message" rows="4" placeholder="Volumes, channels, languages, timelines…" data-i18n-ph="form.ph.message"></textarea>
             </label>
             <div class="form__foot">
               <p class="form__status" role="status" aria-live="polite"></p>
@@ -640,10 +1007,11 @@
     </main>
 
     <!-- ============ FOOTER ============ -->
-    <footer class="footer" data-theme="dark">
+    <footer class="footer on-dark" data-theme="dark">
       <div class="container">
         <div class="footer__top">
           <div class="footer__col footer__col--lead">
+            <img class="footer__logo" src="/ios_logo_blue_black_text-en_white-no-subheader.png" alt="IO Solutions" width="353" height="85" loading="lazy" />
             <p class="footer__pitch" data-i18n="footer.pitch">Canadian customer experience, delivered with care since 2007.</p>
             <a class="footer__mail" href="#contact" data-i18n="footer.start">Start a conversation →</a>
           </div>
@@ -657,6 +1025,7 @@
           <div class="footer__col">
             <h4 data-i18n="footer.company">Company</h4>
             <a href="#about" data-i18n="footer.about">About</a>
+            <a href="#teams" data-i18n="nav.teams">Teams</a>
             <a href="#careers" data-i18n="nav.careers">Careers</a>
             <a href="https://iosolutions.ca/newsroom" target="_blank" rel="noopener" data-i18n="footer.news">Newsroom</a>
             <a href="#contact" data-i18n="nav.contact">Contact</a>
@@ -676,7 +1045,7 @@
           </div>
         </div>
 
-        <div class="footer__word" aria-hidden="true">IO Solutions</div>
+        <p class="footer__big" data-footer-big data-i18n="footer.big">Every conversation <em>counts.</em></p>
 
         <div class="footer__bottom">
           <span>© <span data-year>2026</span> IO Solutions Inc. <span data-i18n="footer.rights">All rights reserved.</span></span>

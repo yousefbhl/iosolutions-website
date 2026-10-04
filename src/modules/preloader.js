@@ -28,18 +28,15 @@ export function runPreloader(onDone) {
   const quick = seenThisSession()
   const num = document.querySelector('.preloader__num')
   const bar = document.querySelector('.preloader__bar i')
-  const ring = document.querySelector('.preloader__o')
-  const circumference = 2 * Math.PI * 10.5
+  const logo = document.querySelector('.preloader__logo')
   const counter = { v: 0 }
   const fonts = document.fonts ? document.fonts.ready : Promise.resolve()
 
-  gsap.set(ring, { strokeDasharray: circumference, strokeDashoffset: circumference })
   const intro = gsap
     .timeline({ defaults: { ease: 'expo.out' } })
-    .from('.preloader__i', { scaleY: 0, transformOrigin: '50% 100%', duration: 0.8 }, 0)
-    .to(ring, { strokeDashoffset: 0, duration: 1.2, ease: 'power3.inOut' }, 0.1)
-    .from('.preloader__core', { scale: 0, transformOrigin: '50% 50%', duration: 0.8, ease: 'back.out(3)' }, 0.8)
-    .from('.preloader__meta', { opacity: 0, y: 10, duration: 0.8 }, 0.1)
+    .fromTo(logo, { clipPath: 'inset(0% 100% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.3, ease: 'expo.inOut' }, 0.05)
+    .fromTo(logo, { scale: 0.92, filter: 'blur(6px)' }, { scale: 1, filter: 'blur(0px)', duration: 1.4, clearProps: 'filter' }, 0.05)
+    .from('.preloader__meta', { opacity: 0, y: 10, duration: 0.8 }, 0.2)
     .to(
       counter,
       {

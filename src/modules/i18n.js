@@ -221,6 +221,154 @@ const fr = {
   'globe.morocco': 'Maroc',
   'cursor.drag': 'Glisser',
   'cursor.view': 'Voir',
+
+  'nav.teams': 'Équipes',
+  'hero.card.live': 'En direct',
+  'hero.card.agent': 'Service à la clientèle',
+
+  'stats.l1': 'Expérience',
+  'stats.l2': 'Présence',
+  'stats.l3': 'Langues',
+  'stats.l4': 'Couverture',
+  'stats.p1': 'Depuis 2007',
+  'stats.p4': 'Toujours actif',
+
+  'teams.eyebrow': 'Nos équipes',
+  'teams.title': 'Les gens derrière<br />chaque <em>conversation.</em>',
+  'teams.lead':
+    'Des équipes spécialisées, une seule norme. Chaque programme est confié à des experts dédiés — appuyés par les équipes TI, qualité et effectifs qui le font tourner.',
+  'teams.handles': 'Ce qu’ils prennent en charge',
+  'teams.shift': 'Un quart typique',
+
+  'team.tech.name': 'Soutien technique',
+  'team.tech.role':
+    'Dépannage de niveaux 1 et 2 pour appareils, connectivité et services numériques — patient, précis et formé sur vos systèmes.',
+  'team.tech.l1': 'Configuration et dépannage d’appareils',
+  'team.tech.l2': 'Connectivité Internet, télé et sans-fil',
+  'team.tech.l3': 'Applications, comptes et connexion',
+  'team.tech.l4': 'Escalades structurées vers le niveau 3',
+  'team.tech.f1': 'Modem hors ligne — test de ligne et réinitialisation',
+  'team.tech.f2': 'Activation eSIM sur un nouveau téléphone',
+  'team.tech.f3': 'Wi-Fi intermittent — visite de technicien planifiée',
+  'team.tech.cta': 'Parler à notre équipe technique',
+
+  'team.it.name': 'TI et systèmes',
+  'team.it.role':
+    'Les ingénieurs qui gardent chaque site, ligne et accès sécurisés, connectés et opérationnels jour et nuit.',
+  'team.it.l1': 'Téléphonie et plateformes de centre de contact',
+  'team.it.l2': 'Sécurité du réseau, des postes et des accès',
+  'team.it.l3': 'Intégrations CRM et outils',
+  'team.it.l4': 'Surveillance et réponse aux incidents',
+  'team.it.f1': 'Exercice de relève de site',
+  'team.it.f2': 'Revue des accès pour un nouveau programme',
+  'team.it.f3': 'Mise à jour du SVI déployée',
+  'team.it.cta': 'Questions sur notre infrastructure',
+
+  'team.sales.name': 'Ventes',
+  'team.sales.role':
+    'Des vendeurs-conseils entrants et sortants qui font croître vos revenus de la bonne façon — avec des scripts conformes et une vraie connaissance des produits.',
+  'team.sales.l1': 'Nouvelles activations et accueil',
+  'team.sales.l2': 'Rehaussements et ventes croisées',
+  'team.sales.l3': 'Fidélisation et reconquête',
+  'team.sales.l4': 'Qualification de pistes',
+  'team.sales.f1': 'Rehaussement de forfait — Internet plus rapide',
+  'team.sales.f2': 'Soumission groupée — maison et mobile',
+  'team.sales.f3': 'Demande d’annulation — offre de fidélisation',
+  'team.sales.cta': 'Parler à notre équipe des ventes',
+
+  'team.care.name': 'Service à la clientèle',
+  'team.care.role':
+    'Des agents bilingues qui règlent dès le premier contact, désamorcent avec empathie et parlent avec la voix de votre marque.',
+  'team.care.l1': 'Questions de facturation et de compte',
+  'team.care.l2': 'Commandes, déménagements et modifications',
+  'team.care.l3': 'Plaintes et escalades',
+  'team.care.l4': 'Fidélité et reconnaissance',
+  'team.care.f1': 'Question de facturation — expliquée et créditée',
+  'team.care.f2': 'Changement d’adresse',
+  'team.care.f3': 'Plainte de service — rappel planifié',
+  'team.care.cta': 'Parler à notre équipe du service',
+
+  'team.quality.name': 'Qualité et formation',
+  'team.quality.role':
+    'Des coachs et analystes qui calibrent, forment et accompagnent chaque semaine, pour que la performance continue de grimper après le lancement.',
+  'team.quality.l1': 'Grilles d’assurance qualité et calibration',
+  'team.quality.l2': 'Analytique vocale et textuelle',
+  'team.quality.l3': 'Programmes d’accueil et de formation',
+  'team.quality.l4': 'Coaching individuel continu',
+  'team.quality.f1': 'Séance de calibration hebdomadaire',
+  'team.quality.f2': 'Revue du sentiment client',
+  'team.quality.f3': 'Fin de formation d’une cohorte',
+  'team.quality.cta': 'Voir comment on accompagne',
+
+  'team.wfm.name': 'Gestion des effectifs',
+  'team.wfm.role':
+    'Des prévisionnistes et analystes en temps réel qui placent le bon agent sur la bonne ligne au bon moment.',
+  'team.wfm.l1': 'Prévision des volumes',
+  'team.wfm.l2': 'Horaires et gestion intrajournalière',
+  'team.wfm.l3': 'Adhérence en temps réel',
+  'team.wfm.l4': 'Planification de la capacité',
+  'team.wfm.f1': 'Prévision de la pointe des Fêtes',
+  'team.wfm.f2': 'Réaffectation intrajournalière au clavardage',
+  'team.wfm.f3': 'Plan de capacité du prochain trimestre',
+  'team.wfm.cta': 'Planifier la capacité avec nous',
+
+  'team.backoffice.name': 'Services administratifs',
+  'team.backoffice.role':
+    'Des spécialistes minutieux derrière chaque commande, vérification et dossier — exacts, traçables et ponctuels.',
+  'team.backoffice.l1': 'Traitement des commandes',
+  'team.backoffice.l2': 'Vérification d’identité et de documents',
+  'team.backoffice.l3': 'Saisie et nettoyage de données',
+  'team.backoffice.l4': 'Suivi de l’exécution',
+  'team.backoffice.f1': 'Commande d’appareil — vérifiée et expédiée',
+  'team.backoffice.f2': 'Vérification de propriété du compte',
+  'team.backoffice.f3': 'Nettoyage des dossiers CRM',
+  'team.backoffice.cta': 'Parler à notre équipe administrative',
+
+  'ch.voice': 'Voix',
+  'ch.chat': 'Clavardage',
+  'ch.email': 'Courriel',
+  'ch.social': 'Médias sociaux',
+  'ch.remote': 'Assistance à distance',
+  'ch.inbound': 'Entrant',
+  'ch.outbound': 'Sortant',
+  'ch.retention': 'Fidélisation',
+  'ch.telephony': 'Téléphonie',
+  'ch.network': 'Réseau',
+  'ch.security': 'Sécurité',
+  'ch.integrations': 'Intégrations',
+  'ch.qa': 'AQ',
+  'ch.analytics': 'Analytique',
+  'ch.coaching': 'Coaching',
+  'ch.elearning': 'Formation en ligne',
+  'ch.forecast': 'Prévisions',
+  'ch.scheduling': 'Horaires',
+  'ch.realtime': 'Temps réel',
+  'ch.planning': 'Planification',
+  'ch.orders': 'Commandes',
+  'ch.verification': 'Vérification',
+  'ch.data': 'Données',
+  'ch.fulfilment': 'Exécution',
+
+  'st.resolved': 'Résolu',
+  'st.progress': 'En cours',
+  'st.escalated': 'Escaladé',
+  'st.passed': 'Réussi',
+  'st.live': 'En ligne',
+  'st.closed': 'Conclu',
+  'st.followup': 'Suivi',
+  'st.saved': 'Client retenu',
+  'st.done': 'Terminé',
+  'st.scheduled': 'Planifié',
+  'st.approved': 'Approuvé',
+  'st.review': 'En révision',
+  'st.complete': 'Complété',
+
+  'form.ph.name': 'Votre nom',
+  'form.ph.email': 'nom@entreprise.com',
+  'form.ph.company': 'Nom de l’entreprise',
+  'form.ph.message': 'Volumes, canaux, langues, échéancier…',
+
+  'footer.big': 'Chaque conversation <em>compte.</em>',
 }
 
 // Strings used only from JS (not present in the HTML).
@@ -244,6 +392,10 @@ function captureEnglish() {
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.dataset.i18n
     if (!(key in en)) en[key] = el.innerHTML.trim()
+  })
+  document.querySelectorAll('[data-i18n-ph]').forEach((el) => {
+    const key = el.dataset.i18nPh
+    if (!(key in en)) en[key] = el.getAttribute('placeholder')
   })
   en['meta.title'] = document.title
   en['meta.description'] = document.querySelector('meta[name="description"]').content
@@ -279,6 +431,10 @@ function apply(lang) {
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const value = dict[el.dataset.i18n]
     if (value != null && el.innerHTML !== value) el.innerHTML = value
+  })
+  document.querySelectorAll('[data-i18n-ph]').forEach((el) => {
+    const value = dict[el.dataset.i18nPh]
+    if (value != null) el.setAttribute('placeholder', value)
   })
   document.title = dict['meta.title']
   document.querySelector('meta[name="description"]').content = dict['meta.description']
